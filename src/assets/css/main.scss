@@ -1,0 +1,14 @@
+button:focus {
+    box-shadow: none !important;
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-inner {
+    background: white;
+    color: black;
+    font-size: 12px;
+    border: 1px solid black;
+}
+
+.tooltip.b-tooltip .arrow {
+    display: none;
+}
