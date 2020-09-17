@@ -31,6 +31,8 @@ export default {
     return {
       search_key: ''
     }
+  },
+  mounted () {
   }
 }
 </script>

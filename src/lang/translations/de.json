@@ -1,9 +1,11 @@
 {
     "English": "English",
     "Deutsch": "Deutsch",
-    "Home": "STARTSEITE",
-    "Clothes": "Wälzlager",
-    "Men": "Kugellager",
-    "Women": "Rollenlager",
-    "Search freebies": "Werbegeschenke suchen"
+    "Home": "Zuhause",
+    "My Account": "Mein Konto",
+    "Search freebies": "Werbegeschenke suchen",
+    "Login": "Anmeldung",
+    "Logout": "Ausloggen",
+    "Sign In": "Anmeldung",
+    "Email or password is incorrect.": "Email oder Passwort ist falsch."
 }

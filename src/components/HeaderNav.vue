@@ -19,18 +19,23 @@
             <hr class="my-3">
             <!-- Primary menu-->
             <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link" href="#">Home</a>
+              <li class="nav-item">
+                <router-link class="nav-link" :to="$i18nRoute({ name: 'home'})">{{$t('Home')}}</router-link>
               </li>
               <li class="nav-item"><a class="nav-link" href="#">Shop</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Account</a>
+              <li class="nav-item" v-if="this.$store.getters.isLoggedIn">
+                <a class="nav-link" href="#">{{$t('My Account')}}</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Login</a>
+              <li class="nav-item" v-if="this.$store.getters.isLoggedIn">
+                <a class="nav-link" href="javascript:void(0)" @click="logout">{{$t('Logout')}}</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Logout</a>
+              <li class="nav-item" v-if="!this.$store.getters.isLoggedIn">
+                <a class="nav-link" href="javascript:void(0)" @click="openLoginModal">{{$t('Login')}}</a>
               </li>
             </ul>
           </b-collapse>
+          <LoginModal />
         </div>
       </div>
     </header>
@@ -39,9 +44,19 @@
 
 <script>
 import TheLanguageSwitcher from '@/components/TheLanguageSwitcher'
+import LoginModal from '@/components/LoginModal'
 export default {
   components: {
-    TheLanguageSwitcher
+    TheLanguageSwitcher,
+    LoginModal
+  },
+  methods: {
+    openLoginModal () {
+      this.$bvModal.show('login_modal')
+    },
+    logout () {
+      this.$store.dispatch('logout')
+    }
   }
 }
 </script>

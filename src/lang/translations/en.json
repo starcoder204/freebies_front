@@ -1,9 +1,11 @@
 {
     "English": "English",
     "Deutsch": "Deutsch",
-    "Home": "HOME",
-    "Clothes": "Clothes",
-    "Men": "Men",
-    "Women": "Women",
-    "Search freebies": "Search freebies"
+    "Home": "Home",
+    "My Account": "My Account",
+    "Search freebies": "Search freebies",
+    "Login": "Login",
+    "Logout": "Logout",
+    "Sign In": "Sign In",
+    "Email or password is incorrect.": "Email or password is incorrect."
 }
